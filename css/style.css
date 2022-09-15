@@ -961,6 +961,7 @@ body::after {
 }
 
 .title__color {
+  display: block;
   color: #6a79ca;
   font-style: italic;
 }
@@ -982,6 +983,7 @@ body::after {
 }
 
 .title__box {
+  display: block;
   position: relative;
   z-index: 2;
 }
@@ -2715,6 +2717,18 @@ body::after {
 
 .item-benefits__decor img {
   max-width: 100%;
+}
+
+@supports (max-height: clamp( 8.125rem , 5.0619369369rem  +  15.3153153153vw , 18.75rem )) {
+  .item-benefits__decor img {
+    max-height: clamp( 8.125rem , 5.0619369369rem  +  15.3153153153vw , 18.75rem );
+  }
+}
+
+@supports not (max-height: clamp( 8.125rem , 5.0619369369rem  +  15.3153153153vw , 18.75rem )) {
+  .item-benefits__decor img {
+    max-height: calc(8.125rem + 10.625 * (100vw - 20rem) / 69.375);
+  }
 }
 
 @supports (right: clamp( -0.625rem , -2.9673423423rem  +  11.7117117117vw , 7.5rem )) {

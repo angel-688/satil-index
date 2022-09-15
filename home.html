@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220914183103">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220915135327">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -94,7 +94,7 @@
 				<div class="who__container">
 					<h2 class="who__title title">
 						Кто
-						<div class="title__color">мы</div>
+						<span class="title__color">мы</span>
 					</h2>
 					<div class="who__about">
 						<p class="who__text">Наша команда занимается вопросами автоматизации в сфере медицины. За этот период
@@ -114,7 +114,7 @@
 					<div class="services__title-block">
 						<h2 class="services__title title title_blue">
 							Сервисы
-							<div class="title__color title__color_default">и услуги</div>
+							<span class="title__color title__color_default">и услуги</span>
 						</h2>
 						<div class="services__text">Сервис состоит из нескольких модульных решений – продуктов, работающих на
 							единой базе данных предприятия:</div>
@@ -190,7 +190,7 @@
 				<div class="goods__container">
 					<div class="goods__content">
 						<h2 class="goods__title title title_goods-home">
-							<div class="title__box">Товары</div>
+							<span class="title__box">Товары</span>
 						</h2>
 						<div class="goods__box">
 							<div class="goods__category category-goods">
@@ -330,8 +330,8 @@
 				<div class="partners__container">
 					<div class="partners__title title title_dakr-blue">Партнерам</div>
 					<div class="partners__info info-partners">
-						<div class="info-partners__title ">Рады будем обсудить и наладить взаимовыгодное сотрудничество с:
-						</div>
+						<h2 class="info-partners__title ">Рады будем обсудить и наладить взаимовыгодное сотрудничество с:
+						</h2>
 						<ul class="info-partners__list">
 							<li class="info-partners__item">Сервисами мониторинга транспорта и персонала.
 							</li>
@@ -347,8 +347,8 @@
 			</section>
 			<section class="contacts">
 				<div class="contacts__container">
-					<div class="contacts__title">Оставьте свои контакты и мы подберем для Вас выгодные условия сотрудничества
-					</div>
+					<h2 class="contacts__title">Оставьте свои контакты и мы подберем для Вас выгодные условия сотрудничества
+					</h2>
 					<form action="#" class="contacts__form form">
 						<div class="form__body">
 							<div class="form__line line-form">
@@ -358,7 +358,7 @@
 								<input autocomplete="off" data-required type="tel" name="form[]" data-error="*Обязательно заполните поле" placeholder="Телефон*" class="input">
 							</div>
 							<div class="form__line line-form">
-								<input autocomplete="off" type="mail" name="form[]" placeholder="E-mail" class="input">
+								<input autocomplete="off" type="email" name="form[]" placeholder="E-mail" class="input">
 							</div>
 							<div class="form__line line-form">
 								<input autocomplete="off" type="text" name="form[]" placeholder="Название компании" class="input">
@@ -371,7 +371,7 @@
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
-				<div class="footer__title">Свяжитесь <span>с нами</span></div>
+				<h2 class="footer__title">Свяжитесь <span>с нами</span></h2>
 				<div class="footer__content">
 					<div class="footer__contacts">
 						<div class="footer__phone phone-footer">
@@ -410,7 +410,7 @@
 							<input autocomplete="off" data-required type="tel" name="form[]" data-error="Обязательно заполните поле" placeholder="Телефон*" class="input">
 						</div>
 						<div class="form-popup__line line-form">
-							<input autocomplete="off" type="mail" name="form[]" placeholder="E-mail" class="input">
+							<input autocomplete="off" type="email" name="form[]" placeholder="E-mail" class="input">
 						</div>
 						<div class="form-popup__line line-form">
 							<select name="form[]" data-speed="300" data-scroll multiple class="form">
@@ -432,11 +432,11 @@
 					</div>
 					<button type="submit" class="form-popup__button button button_small _button-form">ЗАКАЗАТЬ ТОВАРЫ</button>
 					<div class="form-popup__checkbox">
-						<input id="agree" type="checkbox" name="form[]" class="form-popup__input-check">
-						<label for="agree" class="form-popup__label"> <span></span>
-							<div class="form-popup__box"> Отправляя данную форму вы соглашаетесь с
+						<input id="agree-order" type="checkbox" name="form[]" class="form-popup__input-check">
+						<label for="agree-order" class="form-popup__label"> <span></span>
+							<span class="form-popup__box"> Отправляя данную форму вы соглашаетесь с
 								<a href="#">политикой конфиденциальности.</a>
-							</div>
+							</span>
 						</label>
 					</div>
 				</form>
@@ -457,7 +457,7 @@
 							<input autocomplete="off" data-required type="tel" name="form[]" data-error="Обязательно заполните поле" placeholder="Телефон*" class="input">
 						</div>
 						<div class="form-popup__line line-form">
-							<input autocomplete="off" type="mail" name="form[]" placeholder="E-mail" class="input">
+							<input autocomplete="off" type="email" name="form[]" placeholder="E-mail" class="input">
 						</div>
 						<div class="form-popup__line line-form">
 							<input autocomplete="off" type="text" name="form[]" placeholder="Название компании" class="input">
@@ -466,18 +466,18 @@
 					<button type="submit" class="form-popup__button form-popup__button_reg button button_small _button-form">ЗАКАЗАТЬ
 						ТОВАРЫ</button>
 					<div class="form-popup__checkbox">
-						<input id="agree" type="checkbox" name="form[]" class="form-popup__input-check">
-						<label for="agree" class="form-popup__label"> <span></span>
-							<div class="form-popup__box"> Отправляя данную форму вы соглашаетесь с
+						<input id="agree-registration" type="checkbox" name="form[]" class="form-popup__input-check">
+						<label for="agree-registration" class="form-popup__label"> <span></span>
+							<span class="form-popup__box"> Отправляя данную форму вы соглашаетесь с
 								<a href="#">политикой конфиденциальности.</a>
-							</div>
+							</span>
 						</label>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220914183103"></script>
+	<script src="js/app.min.js?_v=20220915135327"></script>
 </body>
 
 </html>
