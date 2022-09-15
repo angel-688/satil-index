@@ -719,13 +719,22 @@ body::after {
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   background-color: rgb(246, 246, 246);
-  padding-top: 1.25rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
   width: 100%;
   border-radius: 20px;
   max-width: 56.25rem;
   margin: 0px auto;
+}
+
+@supports (padding-top: clamp( 0.9375rem , 0.8474099099rem  +  0.4504504505vw , 1.25rem )) {
+  .popup__content {
+    padding-top: clamp( 0.9375rem , 0.8474099099rem  +  0.4504504505vw , 1.25rem );
+  }
+}
+
+@supports not (padding-top: clamp( 0.9375rem , 0.8474099099rem  +  0.4504504505vw , 1.25rem )) {
+  .popup__content {
+    padding-top: calc(0.9375rem + 0.3125 * (100vw - 20rem) / 69.375);
+  }
 }
 
 @supports (padding-bottom: clamp( 1.875rem , 1.5146396396rem  +  1.8018018018vw , 3.125rem )) {
@@ -737,6 +746,30 @@ body::after {
 @supports not (padding-bottom: clamp( 1.875rem , 1.5146396396rem  +  1.8018018018vw , 3.125rem )) {
   .popup__content {
     padding-bottom: calc(1.875rem + 1.25 * (100vw - 20rem) / 69.375);
+  }
+}
+
+@supports (padding-left: clamp( 0.9375rem , 0.8474099099rem  +  0.4504504505vw , 1.25rem )) {
+  .popup__content {
+    padding-left: clamp( 0.9375rem , 0.8474099099rem  +  0.4504504505vw , 1.25rem );
+  }
+}
+
+@supports not (padding-left: clamp( 0.9375rem , 0.8474099099rem  +  0.4504504505vw , 1.25rem )) {
+  .popup__content {
+    padding-left: calc(0.9375rem + 0.3125 * (100vw - 20rem) / 69.375);
+  }
+}
+
+@supports (padding-right: clamp( 0.9375rem , 0.8474099099rem  +  0.4504504505vw , 1.25rem )) {
+  .popup__content {
+    padding-right: clamp( 0.9375rem , 0.8474099099rem  +  0.4504504505vw , 1.25rem );
+  }
+}
+
+@supports not (padding-right: clamp( 0.9375rem , 0.8474099099rem  +  0.4504504505vw , 1.25rem )) {
+  .popup__content {
+    padding-right: calc(0.9375rem + 0.3125 * (100vw - 20rem) / 69.375);
   }
 }
 
@@ -861,6 +894,7 @@ body::after {
      -moz-column-gap: 0.3125rem;
           column-gap: 0.3125rem;
   padding-left: 1.3125rem;
+  text-align: left;
 }
 
 .checkbox__label .check {
@@ -5695,6 +5729,15 @@ body::after {
 
   .popup__title {
     text-align: center;
+  }
+
+  .form-popup {
+    text-align: center;
+  }
+
+  .form-popup__button_reg {
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
 
   .title_why-prog::before {
