@@ -5732,6 +5732,10 @@ body::after {
     background: url("../img/little-arrow-button.svg") 0 0/100% no-repeat;
   }
 
+  .button_blue::after {
+    background: url("../img/white-arrow.svg") 0 0/100% no-repeat;
+  }
+
   .popup__title {
     text-align: center;
   }
