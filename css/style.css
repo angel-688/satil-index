@@ -826,6 +826,7 @@ body::after {
 }
 
 .form-popup__line .form__error {
+  text-align: left;
   margin-top: 0.625rem;
   padding-left: 0.9375rem;
   color: #ed2a2a;
@@ -5009,6 +5010,10 @@ body::after {
 }
 
 @media (max-width: 61.99875em) {
+  .form-popup {
+    text-align: center;
+  }
+
 @supports (top: clamp( -7.5rem , -3.8095238095rem  +  -5.9523809524vw , -5rem )) {
     .title_how-automatization::before {
       top: clamp( -7.5rem , -3.8095238095rem  +  -5.9523809524vw , -5rem );
@@ -5728,10 +5733,6 @@ body::after {
   }
 
   .popup__title {
-    text-align: center;
-  }
-
-  .form-popup {
     text-align: center;
   }
 
