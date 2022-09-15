@@ -2987,6 +2987,7 @@ body::after {
 }
 
 .form__line .form__error {
+  text-align: left;
   margin-top: 0.625rem;
   padding-left: 0.9375rem;
   color: #ed2a2a;
