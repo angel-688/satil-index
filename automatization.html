@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220915140553">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220915190025">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -242,17 +242,25 @@
 					</h2>
 					<form action="#" class="contacts__form form">
 						<div class="form__body">
-							<div class="form__line line-form">
+							<div class="form__line _line-form">
 								<input autocomplete="off" data-required type="text" name="form[]" data-error="*Обязательно заполните поле" placeholder="Имя и фамилия*" class="input">
 							</div>
-							<div class="form__line line-form">
+							<div class="form__line _line-form">
 								<input autocomplete="off" data-required type="tel" name="form[]" data-error="*Обязательно заполните поле" placeholder="Телефон*" class="input">
 							</div>
-							<div class="form__line line-form">
+							<div class="form__line _line-form">
 								<input autocomplete="off" type="email" name="form[]" placeholder="E-mail" class="input">
 							</div>
-							<div class="form__line line-form">
+							<div class="form__line _line-form">
 								<input autocomplete="off" type="text" name="form[]" placeholder="Название компании" class="input">
+							</div>
+							<div class="form-popup__checkbox checkbox _line-form">
+								<input data-required id="agree-registration" type="checkbox" checked name="form[]" class="checkbox__input-check">
+								<label for="agree-registration" class="checkbox__label"> <span class="check"></span>
+									<span class="checkbox__box"> Отправляя данную форму вы соглашаетесь с
+										<a href="#">политикой конфиденциальности.</a>
+									</span>
+								</label>
 							</div>
 						</div>
 						<button type="submit" class="form__button button button_small _button-form">ОТПРАВИТЬ</button>
@@ -294,16 +302,16 @@
 				<div class="popup__title">Заказ товаров</div>
 				<form action="#" class="popup__form form-popup">
 					<div class="form-popup__body">
-						<div class="form-popup__line line-form">
-							<input autocomplete="off" data-required type="text" name="form[]" data-error="Обязательно заполните поле" placeholder="Имя и фамилия*" class="input">
+						<div class="form-popup__line _line-form">
+							<input autocomplete="off" data-required type="text" name="form[]" data-error="*Обязательно заполните поле" placeholder="Имя и фамилия*" class="input">
 						</div>
-						<div class="form-popup__line line-form">
-							<input autocomplete="off" data-required type="tel" name="form[]" data-error="Обязательно заполните поле" placeholder="Телефон*" class="input">
+						<div class="form-popup__line _line-form">
+							<input autocomplete="off" data-required type="tel" name="form[]" data-error="*Обязательно заполните поле" placeholder="Телефон*" class="input">
 						</div>
-						<div class="form-popup__line line-form">
+						<div class="form-popup__line _line-form">
 							<input autocomplete="off" type="email" name="form[]" placeholder="E-mail" class="input">
 						</div>
-						<div class="form-popup__line line-form">
+						<div class="form-popup__line _line-form">
 							<select name="form[]" data-speed="300" data-scroll multiple class="form">
 								<option value="" selected>Вид товаров</option>
 								<option value="1">Модель Z6. Удобен и компактен</option>
@@ -317,15 +325,15 @@
 								<option value="9">Блоки питания</option>
 							</select>
 						</div>
-						<div class="form-popup__line line-form">
+						<div class="form-popup__line _line-form">
 							<input autocomplete="off" type="text" name="form[]" placeholder="Название компании" class="input">
 						</div>
 					</div>
 					<button type="submit" class="form-popup__button button button_small _button-form">ЗАКАЗАТЬ ТОВАРЫ</button>
-					<div class="form-popup__checkbox">
-						<input id="agree-order" type="checkbox" name="form[]" class="form-popup__input-check">
-						<label for="agree-order" class="form-popup__label"> <span></span>
-							<span class="form-popup__box"> Отправляя данную форму вы соглашаетесь с
+					<div class="form-popup__checkbox checkbox _line-form">
+						<input data-required id="agree-order" type="checkbox" checked name="form[]" class="checkbox__input-check">
+						<label for="agree-order" class="checkbox__label"> <span class="check"></span>
+							<span class="checkbox__box"> Отправляя данную форму вы соглашаетесь с
 								<a href="#">политикой конфиденциальности.</a>
 							</span>
 						</label>
@@ -341,25 +349,25 @@
 				<div class="popup__title">Оформление заявки</div>
 				<form action="#" class="popup__form form-popup form-popup_reg">
 					<div class="form-popup__body">
-						<div class="form-popup__line line-form">
-							<input autocomplete="off" data-required type="text" name="form[]" data-error="Обязательно заполните поле" placeholder="Имя и фамилия*" class="input">
+						<div class="form-popup__line _line-form">
+							<input autocomplete="off" data-required type="text" name="form[]" data-error="*Обязательно заполните поле" placeholder="Имя и фамилия*" class="input">
 						</div>
-						<div class="form-popup__line line-form">
-							<input autocomplete="off" data-required type="tel" name="form[]" data-error="Обязательно заполните поле" placeholder="Телефон*" class="input">
+						<div class="form-popup__line _line-form">
+							<input data-tel data-required autocomplete="off" type="tel" name="form[]" data-error="*Обязательно заполните поле" placeholder="Телефон*" class="input">
 						</div>
-						<div class="form-popup__line line-form">
+						<div class="form-popup__line _line-form">
 							<input autocomplete="off" type="email" name="form[]" placeholder="E-mail" class="input">
 						</div>
-						<div class="form-popup__line line-form">
+						<div class="form-popup__line _line-form">
 							<input autocomplete="off" type="text" name="form[]" placeholder="Название компании" class="input">
 						</div>
 					</div>
 					<button type="submit" class="form-popup__button form-popup__button_reg button button_small _button-form">ЗАКАЗАТЬ
 						ТОВАРЫ</button>
-					<div class="form-popup__checkbox">
-						<input id="agree-registration" type="checkbox" name="form[]" class="form-popup__input-check">
-						<label for="agree-registration" class="form-popup__label"> <span></span>
-							<span class="form-popup__box"> Отправляя данную форму вы соглашаетесь с
+					<div class="form-popup__checkbox checkbox _line-form">
+						<input data-required id="agree-registration" type="checkbox" checked name="form[]" class="checkbox__input-check">
+						<label for="agree-registration" class="checkbox__label"> <span class="check"></span>
+							<span class="checkbox__box"> Отправляя данную форму вы соглашаетесь с
 								<a href="#">политикой конфиденциальности.</a>
 							</span>
 						</label>
@@ -368,7 +376,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220915140553"></script>
+	<script src="js/app.min.js?_v=20220915190025"></script>
 </body>
 
 </html>

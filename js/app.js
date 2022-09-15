@@ -490,12 +490,21 @@
         },
         validateInput(formRequiredItem) {
             let error = 0;
+            console.log(formRequiredItem.hasAttribute("data-tel"));
             if ("email" === formRequiredItem.dataset.required) {
                 formRequiredItem.value = formRequiredItem.value.replace(" ", "");
                 if (this.emailTest(formRequiredItem)) {
                     this.addError(formRequiredItem);
                     error++;
                 } else this.removeError(formRequiredItem);
+            } else if ("tel" === formRequiredItem.getAttribute("type")) {
+                if ("" === formRequiredItem.value) {
+                    this.addError(formRequiredItem);
+                    error++;
+                } else if (null === formRequiredItem.value.match(/^\+([\d\p{Ps}\p{Pe}\p{Pd}]){2,}$/gu)) {
+                    this.addNumberError(formRequiredItem);
+                    error++;
+                }
             } else if ("checkbox" === formRequiredItem.type && !formRequiredItem.checked) {
                 this.addError(formRequiredItem);
                 error++;
@@ -513,6 +522,13 @@
             let inputError = formRequiredItem.parentElement.querySelector(".form__error");
             if (inputError) formRequiredItem.parentElement.removeChild(inputError);
             if (formRequiredItem.dataset.error) formRequiredItem.parentElement.insertAdjacentHTML("beforeend", `<div class="form__error">${formRequiredItem.dataset.error}</div>`);
+        },
+        addNumberError(formRequiredItem) {
+            formRequiredItem.classList.add("_form-error");
+            formRequiredItem.parentElement.classList.add("_form-error");
+            let inputError = formRequiredItem.parentElement.querySelector(".form__error");
+            if (inputError) formRequiredItem.parentElement.removeChild(inputError);
+            formRequiredItem.parentElement.insertAdjacentHTML("beforeend", `<div class="form__error">*некорректный номер</div>`);
         },
         removeError(formRequiredItem) {
             formRequiredItem.classList.remove("_form-error");
@@ -4282,16 +4298,13 @@
             },
             breakpoints: {
                 320: {
-                    slidesPerView: 1.05,
-                    spaceBetween: 10
+                    slidesPerView: 1.1
                 },
                 480: {
-                    slidesPerView: 1.3,
-                    spaceBetween: 20
+                    slidesPerView: 1.3
                 },
                 768: {
-                    slidesPerView: 2.2,
-                    spaceBetween: 30
+                    slidesPerView: 2.2
                 }
             },
             on: {}
@@ -4311,10 +4324,10 @@
     }), 0);
     const script_forms = document.forms;
     if (script_forms.length) for (const item of script_forms) {
-        const lines = item.querySelectorAll(".line-form");
+        const lines = item.querySelectorAll("._line-form");
         if (lines.length) lines.forEach((line => {
             line.addEventListener("focusin", (function(e) {
-                if (item.querySelectorAll(".line-form._form-error").length < 2) item.querySelector("._button-form").removeAttribute("disabled");
+                if (item.querySelectorAll("._line-form._form-error").length < 2) item.querySelector("._button-form").removeAttribute("disabled");
             }));
         }));
     }
