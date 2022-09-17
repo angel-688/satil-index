@@ -3308,10 +3308,6 @@ body::after {
   }
 }
 
-.info__title {
-  overflow-wrap: break-all;
-}
-
 @supports (margin-bottom: clamp( 3.1875rem , 2.7010135135rem  +  2.4324324324vw , 4.875rem )) {
   .info__title:not(:last-child) {
     margin-bottom: clamp( 3.1875rem , 2.7010135135rem  +  2.4324324324vw , 4.875rem );
