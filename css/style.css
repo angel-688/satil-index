@@ -3265,8 +3265,8 @@ body::after {
 }
 
 .bottom-how-work__row_controller {
-  -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
 }
 
 .bottom-how-work__item {
@@ -5281,8 +5281,8 @@ body::after {
   }
 
   .goods__box {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
   }
 
   .goods__label {
