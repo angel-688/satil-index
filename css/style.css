@@ -1516,6 +1516,7 @@ body::after {
 }
 
 .menu__link {
+  display: inline-block;
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 1.125rem;
@@ -4566,10 +4567,12 @@ body::after {
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+    overflow: hidden;
   }
 
   .menu__item_sub {
     border-radius: 1.875rem 1.875rem 0rem 0rem;
+    overflow: visible;
   }
 
   .menu__item_sub svg {
