@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220917122505">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220918123507">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -15,7 +15,7 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
-				<a href="" class="header__logo"><img src="img/logo.svg" alt=""></a>
+				<a href="home.html" class="header__logo"><img src="img/logo.svg" alt=""></a>
 				<div class="header__menu menu">
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<nav class="menu__body">
@@ -34,15 +34,18 @@
 								<a href="" class="menu__link menu__link_sub">Сервисы и услуги</a>
 								<ul class="menu__sublist">
 									<li class="menu__subitem">
-										<a href="#" class="menu__sublink">Модуль автоматизации проведения очных предрейсовых/предсменных
+										<a href="automatization.html" class="menu__sublink">Модуль автоматизации проведения очных
+											предрейсовых/предсменных
 											медосмотров.</a>
 									</li>
 									<li class="menu__subitem">
-										<a href="#" class="menu__sublink">Модуль автоматизации работы Контролера ТС по выпуску на
+										<a href="controller.html" class="menu__sublink">Модуль автоматизации работы Контролера ТС по
+											выпуску на
 											линию.</a>
 									</li>
 									<li class="menu__subitem">
-										<a href="#" class="menu__sublink">Модуль: Программно-аппаратный комплекс для проведения
+										<a href="program.html" class="menu__sublink">Модуль: Программно-аппаратный комплекс для
+											проведения
 											Дистанционных
 											автоматизированных медосмотров и консультаций.</a>
 									</li>
@@ -60,7 +63,8 @@
 								</ul>
 							</li>
 							<li class="menu__item"><a href="" class="menu__link">Партнерам </a></li>
-							<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+							<li class="menu__item"><button type="button" data-goto=".contacts" class="menu__link">Контакты</button>
+							</li>
 						</ul>
 					</nav>
 				</div>
@@ -90,7 +94,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="home__who who">
+			<section id="about" class="home__who who">
 				<div class="who__container">
 					<h2 class="who__title title">
 						Кто
@@ -186,7 +190,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="home__goods goods">
+			<section id="goods" class="home__goods goods">
 				<div class="goods__container">
 					<div class="goods__content">
 						<h2 class="goods__title title title_goods-home">
@@ -326,7 +330,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="home__partners partners">
+			<section id="partners" class="home__partners partners">
 				<div class="partners__container">
 					<div class="partners__title title title_dakr-blue">Партнерам</div>
 					<div class="partners__info info-partners">
@@ -485,7 +489,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220917122505"></script>
+	<script src="js/app.min.js?_v=20220918123507"></script>
 </body>
 
 </html>
