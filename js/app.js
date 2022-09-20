@@ -14,6 +14,26 @@
             document.documentElement.classList.add(className);
         }));
     }
+    let isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+        }
+    };
     function getHash() {
         if (location.hash) return location.hash.replace("#", "");
     }
@@ -4369,6 +4389,23 @@
         if (lines.length) lines.forEach((line => {
             line.addEventListener("focusin", (function(e) {
                 if (item.querySelectorAll("._line-form._form-error").length < 2) item.querySelector("._button-form").removeAttribute("disabled");
+            }));
+        }));
+    }
+    if (isMobile.any()) {
+        const links = document.querySelectorAll("[data-link]");
+        if (links.length) links.forEach((link => {
+            link.addEventListener("click", (function(e) {
+                console.log("hi");
+                const active = document.querySelector(".menu__link._active");
+                if (active) {
+                    active.classList.remove("_active");
+                    e.target.classList.add("_active");
+                } else e.target.classList.add("_active");
+                if (document.documentElement.classList.contains("menu-open")) {
+                    console.log("hi");
+                    menuClose();
+                } else FLS(`такого нет`);
             }));
         }));
     }

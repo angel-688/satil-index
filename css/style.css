@@ -1524,6 +1524,10 @@ body::after {
   font-size: 1.125rem;
 }
 
+.menu__link._active {
+  color: rgb(106, 121, 202);
+}
+
 .menu__sublist {
   position: absolute;
   top: 100%;
