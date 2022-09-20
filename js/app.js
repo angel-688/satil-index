@@ -4383,32 +4383,30 @@
             }));
         }
     }), 0);
-    const script_forms = document.forms;
-    if (script_forms.length) for (const item of script_forms) {
-        const lines = item.querySelectorAll("._line-form");
-        if (lines.length) lines.forEach((line => {
-            line.addEventListener("focusin", (function(e) {
-                if (item.querySelectorAll("._line-form._form-error").length < 2) item.querySelector("._button-form").removeAttribute("disabled");
+    window.addEventListener("load", (function(e) {
+        const forms = document.forms;
+        if (forms.length) for (const item of forms) {
+            const lines = item.querySelectorAll("._line-form");
+            if (lines.length) lines.forEach((line => {
+                line.addEventListener("focusin", (function(e) {
+                    if (item.querySelectorAll("._line-form._form-error").length < 2) item.querySelector("._button-form").removeAttribute("disabled");
+                }));
             }));
-        }));
-    }
-    if (isMobile.any()) {
-        const links = document.querySelectorAll("[data-link]");
-        if (links.length) links.forEach((link => {
-            link.addEventListener("click", (function(e) {
-                console.log("hi");
-                const active = document.querySelector(".menu__link._active");
-                if (active) {
-                    active.classList.remove("_active");
-                    e.target.classList.add("_active");
-                } else e.target.classList.add("_active");
-                if (document.documentElement.classList.contains("menu-open")) {
-                    console.log("hi");
-                    menuClose();
-                } else FLS(`такого нет`);
+        }
+        if (isMobile.any()) {
+            const links = document.querySelectorAll("[data-link]");
+            if (links.length) links.forEach((link => {
+                link.addEventListener("click", (function(e) {
+                    const active = document.querySelector(".menu__link._active");
+                    if (active) {
+                        active.classList.remove("_active");
+                        e.target.classList.add("_active");
+                    } else e.target.classList.add("_active");
+                    if (document.documentElement.classList.contains("menu-open")) menuClose();
+                }));
             }));
-        }));
-    }
+        }
+    }));
     window["FLS"] = true;
     isWebp();
     menuInit();
